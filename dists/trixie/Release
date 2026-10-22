@@ -1,0 +1,29 @@
+Origin: CableBox
+Label: CableBox
+Suite: stable
+Codename: trixie
+Date: Thu, 22 Oct 2026 04:20:24 UTC
+Architectures: amd64 arm64
+Components: main
+Description: CableBox set-top box packages
+MD5Sum:
+ af508a592564478fbb28e04cf09ca999 924 main/binary-amd64/Packages
+ 8543d5bed14c252db42db51452087132 628 main/binary-amd64/Packages.gz
+ ac5fc8e10bdb6ebd80591534144463bd 128 main/binary-amd64/Release
+ d192b129dc561d5b22b6c501237f2ed6 924 main/binary-arm64/Packages
+ ae90f7e357f15f1de4da81952ebedb80 630 main/binary-arm64/Packages.gz
+ 8b518a851bb4f28925b1f45f979a6d09 128 main/binary-arm64/Release
+SHA1:
+ 2e20901632fe71994f2512374acb91d78a8f0f3f 924 main/binary-amd64/Packages
+ 2eec1afb51c4fe8ae33d3c05ff20a26ffbb97b4d 628 main/binary-amd64/Packages.gz
+ c819881db1e9a661a3f8d78909692d880191a6b9 128 main/binary-amd64/Release
+ 469326d7e9a20b39673002196f8dd10834bc611f 924 main/binary-arm64/Packages
+ addfb24cb8c573618062e021b2bd57b14428b6c9 630 main/binary-arm64/Packages.gz
+ d736854cac9abc54a9e2cf8775b29b27ff1f29d4 128 main/binary-arm64/Release
+SHA256:
+ 7b61ad5600b64d327c9031244d0db4c57e3cd0cde66c1e3f5ca2b9ee1abdd0e4 924 main/binary-amd64/Packages
+ 618506c935fd116daa9a91838ef9b36268016f79b2900678d9f2a0222d8e92a6 628 main/binary-amd64/Packages.gz
+ bd1cf2c079cef437043f8bb1e01c0e705d25a8e95be7599f94115583d935cf21 128 main/binary-amd64/Release
+ 2bdd831feaa609b18e06bf9f9ee6c7947409c72a6717ccf7792b54c04d26fe0d 924 main/binary-arm64/Packages
+ 4a780630a1b3a06882980aa388bb1a2568e92f16ee30566c73540f40b3bfac1c 630 main/binary-arm64/Packages.gz
+ 21ac513d79cf1257ec6a58d7a687412082201de0e4de499c5c9fd616bbf7424d 128 main/binary-arm64/Release
