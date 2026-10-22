@@ -52,5 +52,9 @@ depends on it.
   key. Run step 1 again, then step 3 so it stays current.
 - **"Release file … is expired":** the repository wasn't re-signed in time. Wait and retry; it's
   re-signed weekly.
-- Set up with the older `cablebox.sources` instructions? It keeps working;
-  `iclx-archive-keyring` maintains `/usr/share/keyrings/cablebox.gpg` too.
+- **"Conflicting values set for option Signed-By"**: this machine has both the old
+  `cablebox.sources` and the new `iclx.sources`. Remove the old one:
+  `sudo rm /etc/apt/sources.list.d/cablebox.sources`, then run `sudo apt update --allow-releaseinfo-change`.
+- Set up with the older `cablebox.sources` instructions and don't want to switch? It keeps working
+  as it is (don't add `iclx.sources` too); `iclx-archive-keyring` maintains
+  `/usr/share/keyrings/cablebox.gpg`.

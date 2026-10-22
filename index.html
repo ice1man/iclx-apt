@@ -53,6 +53,11 @@ before the rename): accept the change once:</p>
 signing key. Run step 1 again, then step 3 so it stays current.</p>
 <p><b>“Release file … is expired”:</b> the repository wasn't re-signed in time. Wait and retry;
 it's re-signed weekly.</p>
-<p class="muted">Set up with the older <code>cablebox.sources</code> instructions? It keeps working.
-<code>iclx-archive-keyring</code> maintains <code>/usr/share/keyrings/cablebox.gpg</code> too.</p>
+<p><b>“Conflicting values set for option Signed-By”:</b> this machine has both the old
+<code>cablebox.sources</code> and the new <code>iclx.sources</code>. Remove the old one:</p>
+<pre><code>sudo rm /etc/apt/sources.list.d/cablebox.sources
+sudo apt update --allow-releaseinfo-change</code></pre>
+<p class="muted">Set up with the older <code>cablebox.sources</code> instructions and don't want to switch?
+It keeps working as it is (don't add <code>iclx.sources</code> too).
+<code>iclx-archive-keyring</code> maintains <code>/usr/share/keyrings/cablebox.gpg</code>.</p>
 </body></html>
