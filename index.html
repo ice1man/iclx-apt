@@ -26,7 +26,7 @@ Packages are built for <b>amd64</b> and <b>arm64</b> (Raspberry Pi 4/5).</p>
 “Failed to parse keyring /usr/share/keyrings/cablebox.gpg … is not signed”.</p>
 
 <h2>2. Add the repository</h2>
-<pre><code>printf 'Types: deb\nURIs: https://apt.icecubelabs.xyz/\nSuites: trixie\nComponents: main\nSigned-By: /usr/share/keyrings/cablebox.gpg\n' \
+<pre><code>printf 'Types: deb\nURIs: https://apt.icecubelabs.xyz/\nSuites: trixie\nComponents: main\nSigned-By: /usr/share/keyrings/cablebox.gpg\nArchitectures: amd64 arm64\n' \
   | sudo tee /etc/apt/sources.list.d/cablebox.sources</code></pre>
 
 <h2>3. Install CableBox</h2>
