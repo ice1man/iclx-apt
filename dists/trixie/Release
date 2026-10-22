@@ -2,8 +2,8 @@ Origin: CableBox
 Label: CableBox
 Suite: stable
 Codename: trixie
-Date: Thu, 22 Oct 2026 20:44:01 UTC
-Valid-Until: Sat, 21 Nov 2026 20:44:01 UTC
+Date: Thu, 22 Oct 2026 20:44:27 UTC
+Valid-Until: Sat, 21 Nov 2026 20:44:27 UTC
 Architectures: amd64 arm64 riscv64 i386 armhf
 Components: main
 Description: CableBox set-top box packages

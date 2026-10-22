@@ -5,8 +5,8 @@ Origin: CableBox
 Label: CableBox
 Suite: stable
 Codename: trixie
-Date: Thu, 22 Oct 2026 20:44:01 UTC
-Valid-Until: Sat, 21 Nov 2026 20:44:01 UTC
+Date: Thu, 22 Oct 2026 20:44:27 UTC
+Valid-Until: Sat, 21 Nov 2026 20:44:27 UTC
 Architectures: amd64 arm64 riscv64 i386 armhf
 Components: main
 Description: CableBox set-top box packages
@@ -60,10 +60,10 @@ SHA256:
  4319747af4ca1fe50d3eb05eeef2009133f77b6d2fc99ecef6dc01cd7699b2c1 128 main/binary-armhf/Release
 -----BEGIN PGP SIGNATURE-----
 
-iHUEARYKAB0WIQT0bbzExvmYzK1IVbgH8fEDIRnMzQUCatp1kQAKCRAH8fEDIRnM
-zfAFAQCJyFcsaxsjWNztuBnRwxunWdYx+eusNA/NAJfMTYT2JgD8CK2n/mOYi530
-g5nvjBquvOcKLpSbMVDeTo6vw6hxvgeIdQQBFgoAHRYhBHz/2/eoaXEclzVTzVDR
-eefpXg+tBQJq2nWRAAoJEFDReefpXg+tWLQA/06CLgNwfBBo/qFPTmLsD6uMtxNw
-sFy2LLe+CJ5THWYMAP0Spl3JrB3SaisTCZYKcKLdcC+OOvEzzIaivqjoB633Dg==
-=6ljW
+iHUEARYKAB0WIQT0bbzExvmYzK1IVbgH8fEDIRnMzQUCatp1qwAKCRAH8fEDIRnM
+zWi+APwKyza/PCyeROiDxFoI4EreyMHE0wBRTzwV3Q3BX0KN8wD/f0+CCQd/VaMT
+AjOgcJP3rSMDPNpit2n5HH3n5UEukgeIdQQBFgoAHRYhBHz/2/eoaXEclzVTzVDR
+eefpXg+tBQJq2nWrAAoJEFDReefpXg+tAf4A/AzQ8asJtquPsnbkiNpwjxi79faO
+8UdJ1LO+DH7R9eQPAQCouI2UQ9nP107YFSdjwjIErRmbpYfqXbRfPt3HvjS9CA==
+=tJ4C
 -----END PGP SIGNATURE-----
