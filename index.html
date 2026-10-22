@@ -1,52 +1,58 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>iclx apt repository</title>
+<title>ICLX apt repository</title>
 <style>
-:root{--bg:#fff;--fg:#1a1a1a;--code:#f3f3f3;--muted:#666}
-@media(prefers-color-scheme:dark){:root{--bg:#111;--fg:#ddd;--code:#222;--muted:#999}}
+:root{--bg:#fff;--fg:#1a1a1a;--code:#f3f3f3;--muted:#666;--line:#ddd}
+@media(prefers-color-scheme:dark){:root{--bg:#111;--fg:#ddd;--code:#222;--muted:#999;--line:#333}}
 body{font:16px/1.55 system-ui,sans-serif;max-width:46rem;margin:2rem auto;padding:0 1rem;background:var(--bg);color:var(--fg)}
 pre{background:var(--code);padding:1rem;overflow-x:auto;border-radius:6px}code{background:var(--code);padding:0 .25em;border-radius:3px}pre code{padding:0}
+table{border-collapse:collapse;width:100%}td,th{text-align:left;padding:.4rem .5rem;border-bottom:1px solid var(--line);vertical-align:top}
 .muted{color:var(--muted)}
 </style>
 </head><body>
-<h1>iclx apt repository</h1>
-<p>Signed apt repository for <b>CableBox</b>, a retro cable-box TV shell for Tvheadend.
-Packages are built for <b>amd64</b>, <b>arm64</b> (Raspberry Pi 4/5) and <b>riscv64</b> (RISC-V boards).</p>
+<h1>ICLX apt repository</h1>
+<p>Signed Debian packages from <b>Ice Cube Labs</b> for <b>amd64</b>, <b>arm64</b> and <b>riscv64</b>.</p>
 
 <h2>Requirements</h2>
-<p>Debian 13 (trixie) or <b>trixie-based</b> Raspberry Pi OS. Bookworm-based images are not supported
-(the packages need glibc 2.39 or newer).</p>
+<p>Debian 13 (trixie) or a <b>trixie-based</b> Raspberry Pi OS. Bookworm-based systems are not supported.</p>
 
 <h2>1. Install the signing key</h2>
-<pre><code>sudo curl -fsSLo /usr/share/keyrings/cablebox.gpg https://apt.icecubelabs.xyz/cablebox.gpg</code></pre>
-<p>Check it before continuing. The fingerprint must be
-<code>F46D BCC4 C6F9 98CC AD48 55B8 07F1 F103 2119 CCCD</code>:</p>
-<pre><code>gpg --show-keys /usr/share/keyrings/cablebox.gpg</code></pre>
-<p class="muted">If this step fails, <code>apt update</code> will later report
-“Failed to parse keyring /usr/share/keyrings/cablebox.gpg … is not signed”.</p>
+<pre><code>sudo curl -fsSLo /usr/share/keyrings/iclx-archive-keyring.gpg https://apt.icecubelabs.xyz/iclx-archive-keyring.gpg
+gpg --show-keys /usr/share/keyrings/iclx-archive-keyring.gpg</code></pre>
+<p>The primary key fingerprint must be <code>F46D BCC4 C6F9 98CC AD48 55B8 07F1 F103 2119 CCCD</code>.</p>
 
 <h2>2. Add the repository</h2>
-<pre><code>printf 'Types: deb\nURIs: https://apt.icecubelabs.xyz/\nSuites: trixie\nComponents: main\nSigned-By: /usr/share/keyrings/cablebox.gpg\nArchitectures: amd64 arm64 riscv64\n' \
-  | sudo tee /etc/apt/sources.list.d/cablebox.sources</code></pre>
+<pre><code>printf 'Types: deb\nURIs: https://apt.icecubelabs.xyz/\nSuites: trixie\nComponents: main\nSigned-By: /usr/share/keyrings/iclx-archive-keyring.gpg\nArchitectures: amd64 arm64 riscv64\n' \
+  | sudo tee /etc/apt/sources.list.d/iclx.sources</code></pre>
 
-<h2>3. Install CableBox</h2>
+<h2>3. Keep the key up to date</h2>
 <pre><code>sudo apt update
-sudo apt install cablebox</code></pre>
+sudo apt install iclx-archive-keyring</code></pre>
+<p class="muted">This package replaces the key file from step 1 and keeps it current when the signing key
+changes. Every ICLX package also depends on it.</p>
 
-<h2>4. Start it</h2>
-<p>Installing doesn't start anything. To make the box boot into the TV interface
-(it takes over the console on tty1) and enable HDMI-CEC remote control:</p>
-<pre><code>sudo systemctl enable --now cablebox cablebox-cec</code></pre>
-<p>The first start shows a setup screen for your Tvheadend server
-(for example <code>http://192.168.1.10:9981</code>, using Digest login).</p>
+<h2>Packages</h2>
+<table>
+<tr><th>Package</th><th>What it is</th><th>Install</th></tr>
+<tr><td><b>cablebox</b></td>
+<td>Retro cable-box TV shell for Tvheadend: live TV, grid guide, DVR, HDMI-CEC remote. Boots straight
+into the TV interface on tty1.</td>
+<td><code>sudo apt install cablebox</code><br><code>sudo systemctl enable --now cablebox cablebox-cec</code></td></tr>
+<tr><td><b>iclx-archive-keyring</b></td><td>The repository's signing keys (step 3).</td>
+<td><code>sudo apt install iclx-archive-keyring</code></td></tr>
+</table>
+<p>CableBox's first start shows a setup screen for your Tvheadend server, for example
+<code>http://192.168.1.10:9981</code> with Digest login. New versions appear in its on-screen
+“System Update Available” prompt.</p>
 
-<h2>Updates</h2>
-<p>New versions published here appear in CableBox's on-screen
-“System Update Available” prompt. You can also update with <code>sudo apt upgrade</code>.</p>
 <h2>Troubleshooting</h2>
-<p><b><code>apt update</code> says the repository “is not signed” or shows <code>NO_PUBKEY</code>:</b>
-the signing key was updated and this machine still has the old key file. Run step 1 again, then
-<code>sudo apt update</code>. CableBox 0.1.1 and later keep the key file up to date automatically.</p>
+<p><b>“Repository … changed its 'Origin' value from 'CableBox' to 'ICLX'”</b> (machines set up
+before the rename): accept the change once:</p>
+<pre><code>sudo apt update --allow-releaseinfo-change</code></pre>
+<p><b>The repository “is not signed” or <code>NO_PUBKEY</code>:</b> this machine has an old copy of the
+signing key. Run step 1 again, then step 3 so it stays current.</p>
 <p><b>“Release file … is expired”:</b> the repository wasn't re-signed in time. Wait and retry;
 it's re-signed weekly.</p>
+<p class="muted">Set up with the older <code>cablebox.sources</code> instructions? It keeps working.
+<code>iclx-archive-keyring</code> maintains <code>/usr/share/keyrings/cablebox.gpg</code> too.</p>
 </body></html>

@@ -1,0 +1,20 @@
+Package: iclx-archive-keyring
+Version: 2026.10.22
+Architecture: all
+Maintainer: ice <ice@icecubelabs.xyz>
+Multi-Arch: foreign
+Replaces: cablebox (<< 0.1.2)
+Breaks: cablebox (<< 0.1.2)
+Homepage: https://apt.icecubelabs.xyz/
+Priority: optional
+Section: misc
+Filename: pool/main/i/iclx-archive-keyring/iclx-archive-keyring_2026.10.22_all.deb
+Size: 1924
+SHA256: 3a80f0b956e1ab1ed8c4d6b55b644d65ef13a829e5c8ff2bcafeddffb1635aeb
+SHA1: b4e34105cc0067d3a910db9c59832786f7a6ef89
+MD5sum: 3f9efe40c4663502bb71b58c7aa56708
+Description: signing keys for the ICLX (Ice Cube Labs) apt repository
+ Installs the OpenPGP keys that sign https://apt.icecubelabs.xyz/ to
+ /usr/share/keyrings/iclx-archive-keyring.gpg, so key rotations reach
+ this machine through normal updates.
+

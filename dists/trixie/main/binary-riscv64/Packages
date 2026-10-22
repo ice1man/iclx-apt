@@ -1,20 +1,40 @@
 Package: cablebox
-Version: 0.1.1-1
+Version: 0.1.2-1
 Architecture: riscv64
 Maintainer: ice <ice@icecubelabs.xyz>
-Installed-Size: 13539
-Depends: adduser, libc6 (>= 2.39), libgbm1 (>= 17.1.0~rc2), libinput10 (>= 1.7.2), libmpv2 (>= 0.29), libudev1 (>= 183), libxkbcommon0 (>= 0.5.0), network-manager, packagekit, polkitd | policykit-1
+Installed-Size: 13542
+Depends: adduser, iclx-archive-keyring, libc6 (>= 2.39), libgbm1 (>= 17.1.0~rc2), libinput10 (>= 1.7.2), libmpv2 (>= 0.29), libudev1 (>= 183), libxkbcommon0 (>= 0.5.0), network-manager, packagekit, polkitd | policykit-1
 Recommends: v4l-utils, fonts-dejavu-core
 Priority: optional
 Section: video
-Filename: pool/main/c/cablebox/cablebox_0.1.1-1_riscv64.deb
-Size: 4305756
-SHA256: f6067fdd1f8b4eb7cb08caf04849318ed7900f5bc3f8d9f06a5b05e3ef1bf9f2
-SHA1: 692574e2471e22a6fa98a400690932d9c7d899e9
-MD5sum: 8c199df06b953b21bd2210c5bd152269
+Filename: pool/main/c/cablebox/cablebox_0.1.2-1_riscv64.deb
+Size: 4305056
+SHA256: 53713d797c8dfdd45fe4bec938fe6c94bc75014be3e35b33b3e0763dbf0d5bf2
+SHA1: 841665c59335941185aed1fbe5272dd9092de00d
+MD5sum: 2094c3babeb5d7c132a5a972913d7198
 Description: Retro cable-box shell for Tvheadend
  Boots straight into a full-screen, remote-controlled TV interface styled like a
  classic cable box: live TV with channel-number entry, a grid guide, DVR
  recordings and favorites from a Tvheadend server, plus on-screen Wi-Fi setup
  and system updates.
+
+Package: iclx-archive-keyring
+Version: 2026.10.22
+Architecture: all
+Maintainer: ice <ice@icecubelabs.xyz>
+Multi-Arch: foreign
+Replaces: cablebox (<< 0.1.2)
+Breaks: cablebox (<< 0.1.2)
+Homepage: https://apt.icecubelabs.xyz/
+Priority: optional
+Section: misc
+Filename: pool/main/i/iclx-archive-keyring/iclx-archive-keyring_2026.10.22_all.deb
+Size: 1924
+SHA256: 3a80f0b956e1ab1ed8c4d6b55b644d65ef13a829e5c8ff2bcafeddffb1635aeb
+SHA1: b4e34105cc0067d3a910db9c59832786f7a6ef89
+MD5sum: 3f9efe40c4663502bb71b58c7aa56708
+Description: signing keys for the ICLX (Ice Cube Labs) apt repository
+ Installs the OpenPGP keys that sign https://apt.icecubelabs.xyz/ to
+ /usr/share/keyrings/iclx-archive-keyring.gpg, so key rotations reach
+ this machine through normal updates.
 

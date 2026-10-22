@@ -1,6 +1,6 @@
 Archive: stable
 Component: main
-Origin: CableBox
-Label: CableBox
+Origin: ICLX
+Label: ICLX
 Architecture: i386
-Description: CableBox set-top box packages
+Description: ICLX (Ice Cube Labs) packages
