@@ -52,3 +52,11 @@ The first start shows a setup screen for your Tvheadend server (for example
 
 New versions published here appear in CableBox's on-screen "System Update Available" prompt.
 You can also update with `sudo apt upgrade`.
+
+## Troubleshooting
+
+- **`apt update` says the repository "is not signed" or shows `NO_PUBKEY`:** the signing key was
+  updated and this machine still has the old key file. Run step 1 again, then `sudo apt update`.
+  CableBox 0.1.1 and later keep the key file up to date automatically.
+- **"Release file … is expired":** the repository wasn't re-signed in time. Wait and retry;
+  it's re-signed weekly.

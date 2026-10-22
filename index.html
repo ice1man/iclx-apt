@@ -43,4 +43,10 @@ sudo apt install cablebox</code></pre>
 <h2>Updates</h2>
 <p>New versions published here appear in CableBox's on-screen
 “System Update Available” prompt. You can also update with <code>sudo apt upgrade</code>.</p>
+<h2>Troubleshooting</h2>
+<p><b><code>apt update</code> says the repository “is not signed” or shows <code>NO_PUBKEY</code>:</b>
+the signing key was updated and this machine still has the old key file. Run step 1 again, then
+<code>sudo apt update</code>. CableBox 0.1.1 and later keep the key file up to date automatically.</p>
+<p><b>“Release file … is expired”:</b> the repository wasn't re-signed in time. Wait and retry;
+it's re-signed weekly.</p>
 </body></html>
