@@ -1,0 +1,6 @@
+Archive: stable
+Component: main
+Origin: CableBox
+Label: CableBox
+Architecture: riscv64
+Description: CableBox set-top box packages
