@@ -1,17 +1,17 @@
 Package: cablebox
-Version: 0.1.6-1
+Version: 0.1.7-1
 Architecture: riscv64
 Maintainer: ice <ice@icecubelabs.xyz>
-Installed-Size: 13888
+Installed-Size: 13880
 Depends: adduser, iclx-archive-keyring, libc6 (>= 2.39), libgbm1 (>= 17.1.0~rc2), libinput10 (>= 1.7.2), libmpv2 (>= 0.29), libudev1 (>= 183), libxkbcommon0 (>= 0.5.0), network-manager, packagekit, polkitd | policykit-1
 Recommends: v4l-utils, fonts-dejavu-core
 Priority: optional
 Section: video
-Filename: pool/main/c/cablebox/cablebox_0.1.6-1_riscv64.deb
-Size: 4387484
-SHA256: f2cdc8ac1fd0306a382de7141d27a1d685774661116b95bcf4d5406bac8b16fb
-SHA1: 4cfbc65e0f04c9f20b37032cedaf778feb2c051a
-MD5sum: e7e39d969f23c874569401c47978fd3c
+Filename: pool/main/c/cablebox/cablebox_0.1.7-1_riscv64.deb
+Size: 4385012
+SHA256: ad590c7fd8393dfb4c09c0e0ba2303cdcba620bc26701ab97aff15a9ecfe2e9d
+SHA1: f4691d25252b3934360c55a8af6f4a2f2eb39ed6
+MD5sum: a18822238debb6fa947d5efb3efaee6f
 Description: Retro cable-box shell for Tvheadend
  Boots straight into a full-screen, remote-controlled TV interface styled like a
  classic cable box: live TV with channel-number entry, a grid guide, DVR
