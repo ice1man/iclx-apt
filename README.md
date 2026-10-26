@@ -14,6 +14,7 @@ Debian 13 (trixie) or a **trixie-based** Raspberry Pi OS. Bookworm-based systems
 **1. Install the signing key**
 
 ```sh
+sudo apt install curl        # if it isn't installed yet
 sudo curl -fsSLo /usr/share/keyrings/iclx-archive-keyring.gpg https://apt.icecubelabs.xyz/iclx-archive-keyring.gpg
 gpg --show-keys /usr/share/keyrings/iclx-archive-keyring.gpg
 ```
@@ -41,7 +42,7 @@ depends on it.
 
 | Package | What it is | Install |
 |---|---|---|
-| `cablebox` | Retro cable-box TV shell for Tvheadend: live TV, grid guide, DVR, HDMI-CEC remote. Boots straight into the TV interface on tty1. | `sudo apt install cablebox` then `sudo systemctl enable --now cablebox cablebox-cec` |
+| `cablebox` | Retro cable-box TV shell for Tvheadend: live TV, grid guide, DVR, HDMI-CEC remote, on-screen settings and updates. Boots straight into the TV interface on tty1, or opens in a window from a desktop. Source and docs: [github.com/ice1man/cablebox](https://github.com/ice1man/cablebox). | `sudo apt install cablebox` then `sudo systemctl enable --now cablebox cablebox-cec` |
 | `iclx-archive-keyring` | The repository's signing keys (step 3). | `sudo apt install iclx-archive-keyring` |
 
 ## Troubleshooting

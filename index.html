@@ -17,7 +17,8 @@ table{border-collapse:collapse;width:100%}td,th{text-align:left;padding:.4rem .5
 <p>Debian 13 (trixie) or a <b>trixie-based</b> Raspberry Pi OS. Bookworm-based systems are not supported.</p>
 
 <h2>1. Install the signing key</h2>
-<pre><code>sudo curl -fsSLo /usr/share/keyrings/iclx-archive-keyring.gpg https://apt.icecubelabs.xyz/iclx-archive-keyring.gpg
+<pre><code>sudo apt install curl        # if it isn't installed yet
+sudo curl -fsSLo /usr/share/keyrings/iclx-archive-keyring.gpg https://apt.icecubelabs.xyz/iclx-archive-keyring.gpg
 gpg --show-keys /usr/share/keyrings/iclx-archive-keyring.gpg</code></pre>
 <p>The primary key fingerprint must be <code>F46D BCC4 C6F9 98CC AD48 55B8 07F1 F103 2119 CCCD</code>.</p>
 
@@ -35,8 +36,9 @@ changes. Every ICLX package also depends on it.</p>
 <table>
 <tr><th>Package</th><th>What it is</th><th>Install</th></tr>
 <tr><td><b>cablebox</b></td>
-<td>Retro cable-box TV shell for Tvheadend: live TV, grid guide, DVR, HDMI-CEC remote. Boots straight
-into the TV interface on tty1.</td>
+<td>Retro cable-box TV shell for Tvheadend: live TV, grid guide, DVR, HDMI-CEC remote, on-screen
+settings and updates. Boots straight into the TV interface on tty1, or opens in a window from a
+desktop. <a href="https://github.com/ice1man/cablebox">Source and docs</a>.</td>
 <td><code>sudo apt install cablebox</code><br><code>sudo systemctl enable --now cablebox cablebox-cec</code></td></tr>
 <tr><td><b>iclx-archive-keyring</b></td><td>The repository's signing keys (step 3).</td>
 <td><code>sudo apt install iclx-archive-keyring</code></td></tr>
