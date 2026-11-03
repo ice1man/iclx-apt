@@ -2,8 +2,8 @@ Origin: ICLX
 Label: ICLX
 Suite: stable
 Codename: trixie
-Date: Sat, 31 Oct 2026 17:02:30 UTC
-Valid-Until: Mon, 30 Nov 2026 17:02:30 UTC
+Date: Tue, 03 Nov 2026 22:36:29 UTC
+Valid-Until: Thu, 03 Dec 2026 22:36:29 UTC
 Architectures: amd64 arm64 riscv64 i386 armhf
 Components: main
 Description: ICLX (Ice Cube Labs) packages

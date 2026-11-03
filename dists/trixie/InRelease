@@ -5,8 +5,8 @@ Origin: ICLX
 Label: ICLX
 Suite: stable
 Codename: trixie
-Date: Sat, 31 Oct 2026 17:02:30 UTC
-Valid-Until: Mon, 30 Nov 2026 17:02:30 UTC
+Date: Tue, 03 Nov 2026 22:36:29 UTC
+Valid-Until: Thu, 03 Dec 2026 22:36:29 UTC
 Architectures: amd64 arm64 riscv64 i386 armhf
 Components: main
 Description: ICLX (Ice Cube Labs) packages
@@ -60,10 +60,10 @@ SHA256:
  f19e2205b4ba749fdfb323f955f046327287df9ee20e6b0d3a3715cb03cfbb69 120 main/binary-armhf/Release
 -----BEGIN PGP SIGNATURE-----
 
-iHUEARYKAB0WIQT0bbzExvmYzK1IVbgH8fEDIRnMzQUCauYfJgAKCRAH8fEDIRnM
-zaweAQCtAyZZe1197dav4ymC8fMnHBQNrEhRW9IJoM7rvyxOgQEAr5LPy+eKDVCU
-+ZTngKGRB/x7Uf4LTZ+exJPQx2SL9QqIdQQBFgoAHRYhBHz/2/eoaXEclzVTzVDR
-eefpXg+tBQJq5h8mAAoJEFDReefpXg+tMLYA/2ZIp+4jr5U9/oulw8eDg1YiqX/l
-qHB1LLcaC3dLOmEbAP9EoJvJ+uy7JwDE25tyHV609uShRGxCOHpihy+WjH0kAA==
-=1gcu
+iHUEARYKAB0WIQT0bbzExvmYzK1IVbgH8fEDIRnMzQUCauph7QAKCRAH8fEDIRnM
+zWgtAQD9R2CpDopdA31rE4nV+USbJSXMR8BwVjItKeOUfreNwgD9HewFwRRkH2vC
+FbyIDetRNQdTG7aS/fjIOA+6SGyEtgOIdQQBFgoAHRYhBHz/2/eoaXEclzVTzVDR
+eefpXg+tBQJq6mHtAAoJEFDReefpXg+t+9EA/3C8/Kpk4ovQpMYzJVnw5EtvWlRp
+brRKHsq5JQCyBAGuAQDPRwBe5HgldEIb6J7NFUGS1b47MyxfDS9wcgTze4A3Bg==
+=yy9v
 -----END PGP SIGNATURE-----
